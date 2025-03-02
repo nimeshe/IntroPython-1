@@ -14,6 +14,10 @@ class GENDER(Enum):
 def is_valid_name(name):
     ## Validates the name entered is valid against valid characters defined. 
     ## As per this definition, it can includes letters (including accented characters), spaces, hyphens, and apostrophes
+    ## Check if age is None or empty
+    if name is None or name == "":
+        return False
+    
     return bool(re.fullmatch(r"[A-Za-zÀ-ÖØ-öø-ÿ\s\-'’]+", name))
 
 def is_valid_age(age):

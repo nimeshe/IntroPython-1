@@ -1,10 +1,17 @@
 import pytest
 from main import *
 
-def test_is_valid_name():
-    assert is_valid_name("John")   #  Valid name - name contains only allowed characters 
-    assert is_valid_name("Mary-Anne")   #  Valid name - name contains only allowed characters 
-    assert is_valid_name("O’Connor")  #  Valid name - name contains only allowed characters
+
+# Define list of names to run the tests
+test_names = ["Jean-Luc", "Anne-Marie", "O'Connor", "D'Angelo", "María José", "Renée", "José", "João", "François", "Márquez", 
+              "López", "García", "Nuñez", "Chloé", "Saoirse O’Brien", "Åsa", "Björn", "Éléonore", "Siobhán", "Mikhail Gorbachev", 
+              "Hans Grüber", "Jürgen Klopp"]
+
+@pytest.mark.parametrize("name", test_names)
+def test_is_valid_name(name):
+    assert is_valid_name(name), f"Failed for name: {name}"
+    assert not is_valid_name(None)  # Invalid name - name cannot be None
+    assert not is_valid_name("")  # Invalid name - name cannot be None
     assert not is_valid_name("John123")  # Invalid name - name entered has numbers
     assert not is_valid_name("@John")  # Invalid name - name entered has an invalid character
     
