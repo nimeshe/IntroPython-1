@@ -21,5 +21,21 @@ def test_is_valid_age():
     assert not is_valid_age(12.51) # Invalid age - age contains decimal places
     assert not is_valid_age("John") # Invalid age - age is not a number
 
+def test_is_valid_gender():
+    assert is_valid_gender("M") #Valid Gender
+    assert is_valid_gender("m") #Valid Gender
+    assert is_valid_gender("F") #Valid Gender
+    assert is_valid_gender("f") #Valid Gender
+    assert is_valid_gender("NB") #Valid Gender
+    assert is_valid_gender("Nb") #Valid Gender
+    assert is_valid_gender("nB") #Valid Gender
+    assert is_valid_gender("nb") #Valid Gender
+    assert is_valid_gender("O") #Valid Gender
+    assert is_valid_gender("o") #Valid Gender
+    
+    assert not is_valid_gender("0") #Invalid Gender
+    assert not is_valid_gender("") #Invalid Gender
+    assert not is_valid_gender(None) #Invalid Gender
+    assert not is_valid_gender(0) #Invalid Gender
 
 pytest.main()
