@@ -1,4 +1,3 @@
-# IntroPython-1
 # This is a simple project created for Uni Discussion Topic
 
 # Scenario for Discussion
