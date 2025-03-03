@@ -8,8 +8,13 @@ The first step in creating the solution is to design a program that collects bas
 # What I have done
 I wanted to use TDD approach as engineering team of the company I work for is using strict TDD. 
 I wrote methods to validate patient information entered, and tests to test those methods. 
+I couldn't figure out mocking my data, so separated validations into separate validators.py and only tested them. main.py is not tested for user input. Could be the next improvement on this. 
 
-# TODO Re: Main
+# Dependencies
+I'm using uv - https://docs.astral.sh/uv/ (It's a little like npm if you've worked with node.js)
+You would require to install python, and uv.
+Do a uv.init which will install pytest.
+Do the configuration and environment setup (using venv) in VS Code
 
 # My Request to you
 You may clone this repo or fork, if you like you can also suggest changes through a pull request. 
