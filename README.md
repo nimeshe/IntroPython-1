@@ -5,6 +5,9 @@ A local medical clinic wants to improve its patient intake process. Currently, p
 
 The first step in creating the solution is to design a program that collects basic patient information and stores it in an organised format.
 
+# Flowchart for logic
+Please check the Miro Board (with view only access): https://miro.com/app/board/uXjVIWrvPcM=/?moveToWidget=3458764619352680640&cot=14
+
 # What I have done
 I wanted to use TDD approach as engineering team of the company I work for is using strict TDD. 
 I wrote methods to validate patient information entered, and tests to test those methods. 
